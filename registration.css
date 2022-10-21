@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+:root{
+    --primary-color:#FFF200;
+    --background-color:#f7f7f7;
+    --secondary-color:#26282B;
+}
+
+body{
+   overflow-x: hidden;
+   cursor: pointer;
+   font-family: sans-serif;
+}
+
+.form-background{
+    width: 100vw;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    padding: 2em;
+    background: url(./jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.form{
+    width: auto;
+    background: var(--background-color);
+    text-align: left;
+    padding: 4em;
+}
+
+.form .container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+    padding: 0;
+}
+
+.form h1{
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 1em;
+    color: var(--secondary-color);
+    letter-spacing: 3px;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.form .container input{
+    width: auto;
+    background-color: var(--background-color);
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--secondary-color);
+    font-size: 17px;
+    padding: 0;
+    letter-spacing: 1px;   
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+
+
+.error{
+    color: rgb(199, 0, 0);
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    font-style: italic;
+    display: none;
+    transition: all ease 1s;
+    -webkit-transition: all ease 1s;
+    -moz-transition: all ease 1s;
+    -ms-transition: all ease 1s;
+    -o-transition: all ease 1s;
+}
+
+a .submit-btn{
+    width: 350px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    height: auto;
+    padding: 8px 0;
+    margin-top: 2em;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: var(--background-color);
+    background: #24cfaa;
+    box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+}
+
+.dropdown input{
+    margin-top: 1em;
+    transition: all ease-in-out 1s;
+    -webkit-transition: all ease-in-out 1s;
+    -moz-transition: all ease-in-out 1s;
+    -ms-transition: all ease-in-out 1s;
+    -o-transition: all ease-in-out 1s;
+}
+
+.dropdown select{
+    margin-top: 0.5em;
+    border: none;
+    border-bottom: 1px solid var(--secondary-color);
+    text-decoration: none;
+    background-color: var(--background-color);
+}
+
+.dropdown select:focus{
+    border: none;
+}
+
+/* for less then 1120px screen */
+@media screen and (max-width: 1120px){
+    .form-background{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .form{
+        width: 650px;
+        padding:6em 4em;
+    }
+
+    .form h1{
+        font-size: 38px;
+    }
+
+    .form .container label{
+        font-size: 26px;
+    }
+
+    .form .container input, .dropdown input{
+        font-size: 24px;
+    }
+
+    .dropdown select{
+        font-size: 24px;
+    }
+
+    .error{
+        font-size: 20px;
+    }
+
+    a{
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+    
+    a .submit-btn{
+        width: 450px;
+        padding: 16px 0;
+        font-size: 24px;
+    }
+}
+
+/* for less then 780px screen */
+@media screen and (max-width: 780px){
+    .form-background{
+        width: 100vw;
+        height: 120vh;
+    }
+
+    .form{
+        width: 550px;
+    }
+
+    .form h1{
+        font-size: 34px;
+    }
+
+    .form .container label{
+        font-size: 22px;
+    }
+
+    .form .container input, .dropdown input{
+        font-size: 22px;
+    }
+
+    .dropdown select{
+        font-size: 22px;
+    }
+
+    .error{
+        font-size: 16px;
+    }
+
+    a .submit-btn{
+        width: 350px;
+    }
+}
+  
+
+
+/* for less then 575px screen */
+@media screen and (max-width: 575px){
+    .form-background{
+        padding: 2em 0;
+    }
+
+    .form{
+        width: 450px;
+        padding: 4em 2em;
+    }
+
+    .form h1{
+        font-size: 30px;
+    }
+
+    .form .container label{
+        font-size: 20px;
+    }
+
+    .form .container input, .dropdown input{
+        font-size: 20px;
+    }
+
+    .dropdown select{
+        font-size: 20px;
+    }
+
+    .error{
+        font-size: 16px;
+    }
+
+    a{
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    a .submit-btn{
+        width: 320px;
+        padding: 12px 0;
+        font-size: 18px;
+    }
+
+}
+  
+/* for less then 511px screen */
+@media screen and (max-width: 511px){
+    .form{
+        width: 410px;
+        padding: 4em 2em;
+    }
+}
+  
+  
+/* for less then 452px screen */
+@media only screen and (max-width: 452px){
+    .form{
+        width: 350px;
+    }
+
+    .form h1{
+        font-size: 24px;
+    }
+
+    .form .container label{
+        font-size: 18px;
+    }
+
+    .form .container input, .dropdown input{
+        font-size: 18px;
+    }
+
+    .dropdown select{
+        font-size: 18px;
+    }
+
+    .error{
+        font-size: 10px;
+    }
+    a .submit-btn{
+        width: 250px;
+        padding: 8px 0;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 411px){
+    .form-background{
+        height: 135vh;
+    }
+}
+  
+/* for less then 370px screen */
+@media only screen and (max-width: 370px){
+    .form-background{
+        padding: 0;
+        background-color: var(--background-color);
+    }
+    
+    .form{
+        width: 300px;
+    }
+
+    .form h1{
+        font-size: 20px;
+    }
+
+    .form .container label{
+        font-size: 14px;
+    }
+
+    .form .container input, .dropdown input{
+        font-size: 14px;
+    }
+
+    .dropdown select{
+        font-size: 14px;
+    }
+
+    .error{
+        font-size: 8px;
+    }
+}
+  
+/* for less then 300px screen */
+@media only screen and (max-width: 300px){
+    .form{
+        width: 280px;
+    }
+
+    a .submit-btn{
+        width: 200px;
+    }
+}
